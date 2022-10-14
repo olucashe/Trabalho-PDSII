@@ -108,25 +108,37 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 
 ## ☕ User Stories
     
-### Cadastro de dados de Pessoas
+### 1. Cadastro de dados de Pessoas
 
 Como administrador da plataforma, desejo um sistema no qual consigo cadastrar as pessoas que escreveram os livros e seus dados, como nome, sobrenome e data de nascimento dessas pessoas.
 
-### Cadastro de Autores
+### 2. Cadastro de Autores
 
 Como usuário, desejo saber de qual autor os livros são, bem como se o autor já faleceu, o ano da morte do mesmo. Desejo saber o nome e sobrenome do autor, bem como a data de nascimento do mesmo.
 
-### Cadastro de Livros
+### 3. Cadastro de Livros
 
 Como usuário, desejo poder ver todos os livros disponíveis na biblioteca, bem como seu titulo, editora, autor, qual seria a publicação e edição do mesmo. Também gostaria de saber o seu preços para compra, bem como também se o livro já foi usado e qual é sua condição fisica, como novo, seminovo, usado, etc.
 
-### Banco de dados de Livros
+### 4. Banco de dados de Livros
 
 Como administrador, desejo ter um banco de dados com os dados dos meus livros, de maneira que a cada vez inicio o programa, a persistência de dados se perpetua. Desejo poder adicionar livros novos no banco de dados, bem como editar o livro e marcar como vendido. Desejo imprimir o titulo e ter a opção de salvar os dados editados no meu banco ou não.
 
-### Contabilizar Venda
+### 5. Contabilizar Venda
 
-Como administrador, desejo saber quais livros já vendi, qual foi meu custo, faturamento e lucro com os mesmos. Desejo listar os livros já vendidos e ver o relatório detalhado conforme os dados j
+Como administrador, desejo saber quais livros já vendi, qual foi meu custo, faturamento e lucro com os mesmos. Desejo listar os livros já vendidos e ver o relatório detalhado conforme os dados citados.
+
+### 6. Realizar Venda
+
+Como cliente, desejo poder escolher um dentre os livros e, sabendo o preço do mesmo, realizar a compra de uma unidade de cada livro desejado.
+
+### 7. Exportar banco de dados
+
+Como administrador, desejo ter fácil acesso ao meu banco de dados, de maneira que possa exportar o mesmo e, em outra instalação do programa, importar os dados do mesmo. Dessa maneira, consigo utilizar o banco de dados em outra loja de minha franquia com os mesmos produtos em estoque, sem precisar de refazer toda a base de cadastro.
+
+### 8. Banco de dados de Vendas
+
+Como administrador, desejo saber para quem vendi cada livro, armazenando este dado em um banco de dados de vendas, no qual informa o nome do cliente e os dados do livro.
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
