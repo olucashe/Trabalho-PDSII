@@ -108,7 +108,12 @@ Não se esqueça de dar uma estrela ao projeto! Obrigado novamente!
 
 ## ☕ User Stories
     
-### Tópico
+### Cadastro de dados de Pessoas
+
+Como administrador da plataforma, desejo um sistema no qual consigo cadastrar as pessoas que escreveram os livros e seus dados, como nome, sobrenome e data de nascimento dessas pessoas.
+
+### Cadastro de autores
+
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
