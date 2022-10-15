@@ -37,7 +37,7 @@
 </details>
 
 
-## Começando 🚀
+## Começando 
 
 > [![Documentação Doxygen][documentacao-shield]][documentacao-url]
 
