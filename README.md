@@ -142,11 +142,6 @@ Como administrador, desejo saber para quem vendi cada livro, armazenando este da
 
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-
 ## 🔗 Links Úteis
 
 - [Histórias de usuários com exemplos e um template](https://www.atlassian.com/br/agile/project-management/user-stories)
