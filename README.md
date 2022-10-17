@@ -89,6 +89,7 @@ Para começar a utilizar, após a instalação, basta rodar:
   ./main.exe
 ```
 
+
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
 ## Contruibuindo
@@ -140,12 +141,15 @@ Como administrador, desejo ter fácil acesso ao meu banco de dados, de maneira q
 
 Como administrador, desejo saber para quem vendi cada livro, armazenando este dado em um banco de dados de vendas, no qual informa o nome do cliente e os dados do livro.
 
+### 9. Exclusão de Livros do Banco de Dados
+
+Como administrador, desejo excluir os livros nos quais eu não desejo ter mais em minha loja, excluindo-os do meu banco de dados e não aparecendo mais em minha loja.
+
+### 10. Apagar dados da loja
+
+Como administrador, desejo ter a opção de zerar todos os dados da loja e iniciar o cadastro dos itens do zero, de maneira a facilitar a renovação de estoque.
+
 <p align="right">(<a href="#top">Voltar para o topo</a>)</p>
-
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
 
 ## 🔗 Links Úteis
 
