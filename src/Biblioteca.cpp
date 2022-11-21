@@ -741,7 +741,7 @@ void Biblioteca::student()
     cout << endl << "Por favor, escolha uma das opcoes abaixo: ";
     cout << endl << "1. Ver lista de livros";
     cout << endl << "2. Pesquisar livro";
-    cout << endl << "3. Voltar ao menu anterior"
+    cout << endl << "3. Voltar ao menu anterior";
     cout << endl << "4. Fechar aplicacao";
     cout << endl << "Opcao: ";
     cin >> i;
