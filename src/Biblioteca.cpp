@@ -117,15 +117,16 @@ void Biblioteca::modify()
         }
         intf1.close();
         system("cls");
-        cout << "\n\t\tPlease Choose One Option :-\n";
-        cout << "\n\t\t1.Search By Book Name\n\n\t\t2.Search By Book's ID\n";
-        cout << "\n\t\tEnter Your Choice : ";
+        cout << endl << "Por favor, selecione uma opcao: " << endl;
+        cout << endl << "1. Pesquisar por nome do livro";
+        cout << endl << "2. Pesquisar por ID do livro";
+        cout << endl << "Opcao: ";
         cin >> i;
         fflush(stdin);
         if (i == 1)
         {
             system("cls");
-            cout << "\n\t\tEnter Book Name : ";
+            cout << endl << "Digite o nome do livro: ";
             cin.getline(st1, 100);
             system("cls");
             fstream intf("Booksdata.txt", ios::in | ios::out | ios::ate | ios::binary);
@@ -150,7 +151,7 @@ void Biblioteca::modify()
         }
         else if (i == 2)
         {
-            cout << "\n\t\tEnter Book's ID : ";
+            cout << endl << "Digite o ID do livro: ";
             cin.getline(st1, 100);
             system("cls");
             fstream intf("Booksdata.txt", ios::in | ios::out | ios::ate | ios::binary);
@@ -175,22 +176,22 @@ void Biblioteca::modify()
         }
         else
         {
-            cout << "\n\t\tIncorrect Input.....:(\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Opcao invalida";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             system("cls");
             modify();
         }
         if (cont == 0)
         {
-            cout << "\n\t\tBook Not Found.\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Livro nao encontrado";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             system("cls");
             modify();
         }
         else
-            cout << "\n\t\tUpdate Successful.\n";
+            cout << endl << "Livro modificado com sucesso";
     }
     else if (i == 2)
     {
@@ -201,7 +202,7 @@ void Biblioteca::modify()
         ofstream outf("Booksdata.txt", ios::app | ios::binary);
         outf.write((char *)this, sizeof(*this));
         outf.close();
-        cout << "\n\t\tBook added Successfully.\n";
+        cout << endl << "Livro adicionado com sucesso";
     }
     else if (i == 3)
     {
@@ -210,8 +211,8 @@ void Biblioteca::modify()
         ifstream intf1("Booksdata.txt", ios::binary);
         if (!intf1)
         {
-            cout << "\n\t\tFile Not Found\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Arquivo nao encontrado";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             intf1.close();
             system("cls");
@@ -219,15 +220,16 @@ void Biblioteca::modify()
         }
         intf1.close();
         system("cls");
-        cout << "\n\t\tPlease Choose One Option for deletion:-\n";
-        cout << "\n\t\t1.By Book Name\n\n\t\t2.By Book's ID\n";
-        cout << "\n\t\tEnter Your Choice : ";
+        cout << endl << "Por favor, selecione uma opcao para deletar: " << endl;
+        cout << endl << "1. Deletar por nome do livro";
+        cout << endl << "2. Deletar por ID do livro";
+        cout << endl << "Opcao: ";
         cin >> i;
         fflush(stdin);
         if (i == 1)
         {
             system("cls");
-            cout << "\n\t\tEnter Book Name : ";
+            cout << endl << "Digite o nome do livro: ";
             cin.getline(st1, 100);
             ofstream outf("temp.txt", ios::app | ios::binary);
             ifstream intf("Booksdata.txt", ios::binary);
@@ -255,7 +257,7 @@ void Biblioteca::modify()
         }
         else if (i == 2)
         {
-            cout << "\n\t\tEnter Book's ID : ";
+            cout << endl << "Digite o ID do livro: ";
             cin.getline(st1, 100);
             ofstream outf("temp.txt", ios::app | ios::binary);
             ifstream intf("Booksdata.txt", ios::binary);
@@ -282,22 +284,22 @@ void Biblioteca::modify()
         }
         else
         {
-            cout << "\n\t\tIncorrect Input.....:(\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Opcao invalida";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             system("cls");
             modify();
         }
         if (cont == 0)
         {
-            cout << "\n\t\tBook Not Found.\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Livro nao encontrado";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             system("cls");
             modify();
         }
         else
-            cout << "\n\t\tDeletion Successful.\n";
+            cout << endl << "Livro deletado com sucesso";
     }
     else if (i == 4)
     {
@@ -306,13 +308,13 @@ void Biblioteca::modify()
     }
     else
     {
-        cout << "\n\t\tWrong Input.\n";
-        cout << "\n\t\tPress any key to continue.....";
+        cout << endl << "Opcao invalida";
+        cout << endl << "Pressione qualquer tecla para continuar...";
         getch();
         system("cls");
         modify();
     }
-    cout << "\n\t\tPress any key to continue.....";
+    cout << endl << "Pressione qualquer tecla para continuar...";
     getch();
     system("cls");
     librarian();
@@ -322,8 +324,15 @@ int Biblioteca::branch(int x)
 {
     int i;
     cout << "\n\t\t>>Please Choose one Branch :-\n";
-    cout << "\n\t\t1.BIT\n\n\t\t2.EE\n\n\t\t3.EC\n\n\t\t4.CIVIL\n\n\t\t5.MECHANICAL\n\n\t\t6.1ST YEAR\n\n\t\t7.Go to menu\n";
-    cout << "\n\t\tEnter youur choice : ";
+    cout << endl << "Por favor, selecione um tipo de livro: " << endl;
+    cout << endl << "1. Ficcao";
+    cout << endl << "2. Romance";
+    cout << endl << "3. Acao";
+    cout << endl << "4. Suspense";
+    cout << endl << "5. Terror";
+    cout << endl << "6. Biografia";
+    cout << endl << "7. Voltar ao menu anterior";
+    cout << endl << "Opcao: ";
     cin >> i;
     switch (i)
     {
@@ -352,7 +361,7 @@ int Biblioteca::branch(int x)
         else
             librarian();
     default:
-        cout << "\n\t\tPlease enter correct option :(";
+        cout << endl << "Opcao invalida";
         getch();
         system("cls");
         branch(x);
@@ -369,8 +378,8 @@ void Biblioteca::see(int x)
     ifstream intf("Booksdata.txt", ios::binary);
     if (!intf)
     {
-        cout << "\n\t\tFile Not Found.\n";
-        cout << "\n\t\t->Press any key to continue.....";
+        cout << endl << "Arquivo nao encontrado";
+        cout << endl << "Pressione qualquer tecla para continuar...";
         getch();
         system("cls");
         if (x == 1)
@@ -380,15 +389,16 @@ void Biblioteca::see(int x)
     }
 
     system("cls");
-    cout << "\n\t\tPlease Choose one option :-\n";
-    cout << "\n\t\t1.Search By Name\n\n\t\t2.Search By Book's ID\n";
-    cout << "\n\t\tEnter Your Choice : ";
+    cout << endl << "Por favor, selecione uma opcao para ver: " << endl;
+    cout << endl << "1. Ver por nome do livro";
+    cout << endl << "2. Ver por ID do livro";
+    cout << endl << "Opcao: ";
     cin >> i;
     fflush(stdin);
     intf.read((char *)this, sizeof(*this));
     if (i == 1)
     {
-        cout << "\n\t\tEnter Book's Name : ";
+        cout << endl << "Digite o nome do livro: ";
         cin.getline(ch, 100);
         system("cls");
         while (!intf.eof())
@@ -397,7 +407,7 @@ void Biblioteca::see(int x)
                 ;
             if (bookname[i] == '\0' && ch[i] == '\0')
             {
-                cout << "\n\t\tBook Found :-\n";
+                cout << endl << "Livro encontrado";
                 show(x);
                 cont++;
                 break;
@@ -407,7 +417,7 @@ void Biblioteca::see(int x)
     }
     else if (i == 2)
     {
-        cout << "\n\t\tEnter Book's ID : ";
+        cout << endl << "Digite o ID do livro: ";
         cin.getline(ch, 100);
         system("cls");
         while (!intf.eof())
@@ -416,7 +426,7 @@ void Biblioteca::see(int x)
                 ;
             if (sc[i] == '\0' && ch[i] == '\0')
             {
-                cout << "\n\t\tBook Found :-\n";
+                cout << endl << "Livro encontrado";
                 show(x);
                 cont++;
                 break;
@@ -427,16 +437,16 @@ void Biblioteca::see(int x)
     else
     {
         cont++;
-        cout << "\n\t\tPlease enter correct option :(";
+        cout << endl << "Opcao invalida";
         getch();
         system("cls");
         see(x);
     }
     intf.close();
     if (cont == 0)
-        cout << "\n\t\tThis Book is not available :( \n";
+        cout << endl << "Livro nao encontrado";
 
-    cout << "\n\t\tPress any key to continue.....";
+    cout << endl << "Pressione qualquer tecla para continuar...";
     getch();
     system("cls");
     if (x == 1)
@@ -451,8 +461,13 @@ void Biblioteca::issue()
     int b, i, j, d, m, y, cont = 0;
 
     system("cls");
-    cout << "\n\t\t->Please Choose one option :-\n";
-    cout << "\n\t\t1.Issue Book\n\n\t\t2.View Issued Book\n\n\t\t3.Search student who isuued books\n\n\t\t4.Reissue Book\n\n\t\t5.Return Book\n\n\t\t6.Go back to menu\n\n\t\tEnter Your Choice : ";
+    cout << endl << "Por favor, selecione uma opcao: " << endl;
+    cout << endl << "1. Emprestar livro";
+    cout << endl << "2. Ver livros emprestados";
+    cout << endl << "3. Pesquisar por estudantes que emprestaram livros";
+    cout << endl << "4. Reemprestar livro";
+    cout << endl << "5. Voltar ao menu anterior";
+    cout << endl << "Opcao: ";
     cin >> i;
     fflush(stdin);
     if (i == 1)
@@ -461,40 +476,39 @@ void Biblioteca::issue()
         b = branch(2);
         system("cls");
         fflush(stdin);
-        cout << "\n\t\t->Please Enter Details :-\n";
-        cout << "\n\t\tEnter Book Name : ";
+        cout << endl << "Digite o nome do livro: ";
         cin.getline(bookname, 100);
-        cout << "\n\t\tEnter Book's ID : ";
+        cout << endl << "Digite o ID do livro: ";
         cin.getline(sc, 20);
         // strcpy(st,sc);
         der(sc, b, 1);
-        cout << "\n\t\tEnter Student Name : ";
+        cout << endl << "Digite o nome do estudante: ";
         cin.getline(auname, 100);
-        cout << "\n\t\tEnter Student's ID : ";
+        cout << endl << "Digite o ID do estudante: ";
         cin.getline(sc1, 20);
-        cout << "\n\t\tEnter date : ";
+        cout << endl << "Digite a data de emprestimo: ";
         cin >> q >> B >> p;
         ofstream outf("student.txt", ios::binary | ios::app);
         outf.write((char *)this, sizeof(*this));
         outf.close();
-        cout << "\n\n\t\tIssue Successfully.\n";
+        cout << endl << "Livro emprestado com sucesso";
     }
     else if (i == 2)
     {
         ifstream intf("student.txt", ios::binary);
         system("cls");
-        cout << "\n\t\t->The Details are :-\n";
+        cout << endl << "Livros emprestados: " << endl;
         intf.read((char *)this, sizeof(*this));
         i = 0;
         while (!intf.eof())
         {
             i++;
-            cout << "\n\t\t********** " << i << ". ********** \n";
-            cout << "\n\t\tStudent Name : " << auname << "\n\t\t"
-                 << "Student's ID : " << sc1 << "\n\t\t"
-                 << "Book Name : " << bookname << "\n\t\t"
-                 << "Book's ID : " << sc << "\n\t\t"
-                 << "Date : " << q << "/" << B << "/" << p << "\n";
+            cout << endl <<"********** " << i << ". **********" << endl;
+            cout << endl << "Nome do estudante: " << auname;
+            cout << endl << "ID do estudante: " << sc1;
+            cout << endl << "Nome do livro: " << bookname;
+            cout << endl << "ID do livro: " << sc;
+            cout << endl << "Data de emprestimo: " << q << "/" << B << "/" << p << endl;
             intf.read((char *)this, sizeof(*this));
         }
         intf.close();
@@ -503,10 +517,9 @@ void Biblioteca::issue()
     {
         system("cls");
         fflush(stdin);
-        cout << "\n\t\t->Please Enter Details :-\n";
-        cout << "\n\n\t\tEnter Student Name : ";
+        cout << endl << "Digite o nome do estudante: ";
         cin.getline(st, 50);
-        cout << "\n\n\t\tEnter Student's ID : ";
+        cout << endl << "Digite o ID do estudante: ";
         cin.getline(st1, 20);
         system("cls");
         ifstream intf("student.txt", ios::binary);
@@ -521,29 +534,28 @@ void Biblioteca::issue()
                 cont++;
                 if (cont == 1)
                 {
-                    cout << "\n\t\t->The Details are :-\n";
-                    cout << "\n\t\tStudent Name : " << auname;
-                    cout << "\n\t\tStudent's ID : " << sc1;
+                    cout << endl << "Livros emprestados por " << st << ": " << endl;
+                    cout << endl << "Nome do estudante: " << auname;
+                    cout << endl << "ID do estudante: " << sc1;
                 }
-                cout << "\n\n\t\t******* " << cont << ". Book details *******\n";
-                cout << "\n\t\tBook Name : " << bookname;
-                cout << "\n\t\tBook's ID : " << sc;
-                cout << "\n\t\tDate : " << q << "/" << B << "/" << p << "\n";
+                cout << endl << "******* " << cont << ". Detalhe do livro *******" << endl;
+                cout << endl << "Nome do livro: " << bookname;
+                cout << endl << "ID do livro: " << sc;
+                cout << endl << "Data de emprestimo: " << q << "/" << B << "/" << p << endl;
             }
             intf.read((char *)this, sizeof(*this));
         }
         intf.close();
         if (cont == 0)
-            cout << "\n\t\tNo record found.";
+            cout << endl << "Nenhum livro emprestado por " << st;
     }
     else if (i == 4)
     {
         system("cls");
         fflush(stdin);
-        cout << "\n\t\t->Please Enter Details :-\n";
-        cout << "\n\n\t\tEnter Student's ID : ";
+        cout << endl << "Digite o ID do estudante: ";
         cin.getline(st, 50);
-        cout << "\n\t\tEnter Book's ID : ";
+        cout << endl << "Digite o ID do livro: ";
         cin.getline(st1, 20);
         fstream intf("student.txt", ios::in | ios::out | ios::ate | ios::binary);
         intf.seekg(0);
@@ -559,12 +571,12 @@ void Biblioteca::issue()
                 d = q;
                 m = B;
                 y = p;
-                cout << "\n\t\tEnter New Date : ";
+                cout << endl << "Digite a data de reemprestimo: ";
                 cin >> q >> B >> p;
                 fine(d, m, y, q, B, p);                   // fn1
                 intf.seekp(intf.tellp() - sizeof(*this)); // fn3
                 intf.write((char *)this, sizeof(*this));  // fn5
-                cout << "\n\n\t\tReissue successfully.";  // fn3
+                cout << endl << "Livro reemprestado com sucesso";
                 break;
             }
             intf.read((char *)this, sizeof(*this));
@@ -577,13 +589,12 @@ void Biblioteca::issue()
         b = branch(2);
         system("cls");
         fflush(stdin);
-        cout << "\n\t\t->Please Enter Details :-\n";
-        cout << "\n\t\tEnter Book's ID : ";
+        cout << endl << "Digite o ID do livro: ";
         cin.getline(st1, 20);
         der(st1, b, 2);
-        cout << "\n\n\t\tEnter Student's ID : ";
+        cout << endl << "Digite o ID do estudante: ";
         cin.getline(st, 20);
-        cout << "\n\t\tEnter Present date : ";
+        cout << endl << "Digite a data de devolucao: ";
         cin >> d >> m >> y;
         ofstream outf("temp.txt", ios::app | ios::binary);
         ifstream intf("student.txt", ios::binary);
@@ -599,7 +610,7 @@ void Biblioteca::issue()
                 cont++;
                 intf.read((char *)this, sizeof(*this));
                 fine(q, B, p, d, m, y);
-                cout << "\n\t\tReturned successfully.";
+                cout << endl << "Livro devolvido com sucesso";
             }
             else
             {
@@ -620,9 +631,9 @@ void Biblioteca::issue()
         librarian();
     }
     else
-        cout << "\n\t\tWrong Input.\n";
+        cout << endl << "Opcao invalida";
 
-    cout << "\n\n\t\tPress any key to continue.....";
+    cout << endl << "Pressione qualquer tecla para continuar";
     getch();
     system("cls");
     librarian();
