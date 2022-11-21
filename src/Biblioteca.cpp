@@ -1,5 +1,9 @@
 #include "Biblioteca.hpp"
 
+/**
+ * @brief Construtor da classe Biblioteca
+ * 
+ */
 Biblioteca::Biblioteca()
 {
     strcpy(bookname, "Nome do Livro");
@@ -11,6 +15,10 @@ Biblioteca::Biblioteca()
     p = 0;
 }
 
+/**
+ * @brief Função que adiciona um livro na biblioteca
+ * 
+ */
 void Biblioteca::getdata()
 {
     int i;
@@ -34,6 +42,11 @@ void Biblioteca::getdata()
     cin >> q;
 }
 
+/**
+ * @brief Função que mostra os dados de um livro
+ * 
+ * @param i 
+ */
 void Biblioteca::show(int i)
 {
     cout << endl << "Nome do Livro: " << bookname;
@@ -48,6 +61,11 @@ void Biblioteca::show(int i)
     }
 }
 
+/**
+ * @brief Função que mostra os dados dos livros
+ * 
+ * @param i 
+ */
 void Biblioteca::booklist(int i)
 {
     int b, r = 0;
@@ -90,6 +108,11 @@ void Biblioteca::booklist(int i)
     else
         librarian();
 }
+
+/**
+ * @brief Função que modificada os dados de um livro
+ * 
+ */
 void Biblioteca::modify()
 {
     char st1[100];
@@ -320,10 +343,15 @@ void Biblioteca::modify()
     librarian();
 }
 
+/**
+ * @brief Função que mostra todos os tipos de livros
+ * 
+ * @param x 
+ * @return int 
+ */
 int Biblioteca::branch(int x)
 {
     int i;
-    cout << "\n\t\t>>Please Choose one Branch :-\n";
     cout << endl << "Por favor, selecione um tipo de livro: " << endl;
     cout << endl << "1. Ficcao";
     cout << endl << "2. Romance";
@@ -369,6 +397,11 @@ int Biblioteca::branch(int x)
     return 0;
 }
 
+/**
+ * @brief Função que mostra todos os livros de um determinado tipo
+ * 
+ * @param x 
+ */
 void Biblioteca::see(int x)
 {
     int i, b, cont = 0;
@@ -455,6 +488,10 @@ void Biblioteca::see(int x)
         librarian();
 }
 
+/**
+ * @brief Função que gerencia o emprestimo de livros
+ * 
+ */
 void Biblioteca::issue()
 {
     char st[50], st1[20];
@@ -639,6 +676,16 @@ void Biblioteca::issue()
     librarian();
 }
 
+/**
+ * @brief  Função que calcula a multa
+ * 
+ * @param d 
+ * @param m 
+ * @param y 
+ * @param dd 
+ * @param mm 
+ * @param yy 
+ */
 void Biblioteca::fine(int d, int m, int y, int dd, int mm, int yy)
 {
     long int n1, n2;
@@ -666,6 +713,13 @@ void Biblioteca::fine(int d, int m, int y, int dd, int mm, int yy)
         cout << endl << "Multa de " << n2 << " dias";
 }
 
+/**
+ * @brief Função que verifica se o livro está disponível
+ * 
+ * @param st 
+ * @param b 
+ * @param x 
+ */
 void Biblioteca::der(char st[], int b, int x)
 {
     int i, cont = 0;
@@ -704,6 +758,10 @@ void Biblioteca::der(char st[], int b, int x)
     intf.close();
 }
 
+/**
+ * @brief Função principal do programa
+ * 
+ */
 void Biblioteca::get()
 {
     int i;
@@ -734,6 +792,10 @@ void Biblioteca::get()
     }
 }
 
+/**
+ * @brief Função que mostra o painel do estudante
+ * 
+ */
 void Biblioteca::student()
 {
     int i;
@@ -765,6 +827,10 @@ void Biblioteca::student()
     }
 }
 
+/**
+ * @brief Função que verifica a senha do bibliotecário
+ * 
+ */
 void Biblioteca::pass()
 {
     int i = 0;
@@ -810,6 +876,10 @@ void Biblioteca::pass()
     }
 }
 
+/**
+ * @brief Função que mostra o painel do bibliotecário
+ * 
+ */
 void Biblioteca::librarian()
 {
     int i;
@@ -855,6 +925,10 @@ void Biblioteca::librarian()
     }
 }
 
+/**
+ * @brief Função de gerenciamendo de senha
+ * 
+ */
 void Biblioteca::password()
 {
     int i = 0, j = 0;
