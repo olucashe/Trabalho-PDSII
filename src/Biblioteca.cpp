@@ -36,14 +36,15 @@ void Biblioteca::getdata()
 
 void Biblioteca::show(int i)
 {
-    cout << "\n\t\tBook Name : " << bookname << endl;
-    cout << "\n\t\tBook's Author Name : " << auname << endl;
-    cout << "\n\t\tBook's ID : " << sc << endl;
-    cout << "\n\t\tBook's Publication : " << sc1 << endl;
+    cout << endl << "Nome do Livro: " << bookname;
+    cout << endl << "Nome do Autor: " << auname;
+    cout << endl << "ID do Livro: " << sc;
+    cout << endl << "Nome de Publicacao: " << sc1;
+
     if (i == 2)
     {
-        cout << "\n\t\tBook's Price : " << p << endl;
-        cout << "\n\t\tBook's Quantity : " << q << endl;
+        cout << endl << "Preco do Livro: " << p;
+        cout << endl << "Quantidade de Livros: " << q;
     }
 }
 
@@ -53,12 +54,16 @@ void Biblioteca::booklist(int i)
     system("cls");
     b = branch(i);
     system("cls");
+
     ifstream intf("Booksdata.txt", ios::binary);
+
     if (!intf)
-        cout << "\n\t\tFile Not Found.";
+    {
+        cout << endl << "Arquivo nao encontrado";
+    }
     else
     {
-        cout << "\n\t    ************ Book List ************ \n\n";
+        cout << endl << "************ Lista de Livros ************" << endl;
         intf.read((char *)this, sizeof(*this));
         while (!intf.eof())
         {
@@ -70,14 +75,14 @@ void Biblioteca::booklist(int i)
                 else
                 {
                     r++;
-                    cout << "\n\t\t********** " << r << ". ********** \n";
+                    cout << endl << "********** " << r << ". **********" << endl;
                     show(i);
                 }
             }
             intf.read((char *)this, sizeof(*this));
         }
     }
-    cout << "\n\t\tPress any key to continue.....";
+    cout << endl << "Pressione qualquer tecla para continuar...";
     getch();
     system("cls");
     if (i == 1)
@@ -90,9 +95,12 @@ void Biblioteca::modify()
     char st1[100];
     int i = 0, b, cont = 0;
     system("cls");
-    cout << "\n\t\t>>Please Choose one option :-\n";
-    cout << "\n\t\t1.Modification In Current Books\n\n\t\t2.Add New Book\n\n\t\t3.Delete A Book\n\n\t\t4.Go back\n";
-    cout << "\n\n\t\tEnter your choice : ";
+    cout << endl << "Por favor, selecione uma opcao: " << endl;
+    cout << endl << "1. Modificar um livro";
+    cout << endl << "2. Adicionar um livro";
+    cout << endl << "3. Remover um livro";
+    cout << endl << "4. Voltar ao menu principal";
+    cout << endl << "Opcao: ";
     cin >> i;
     if (i == 1)
     {
@@ -101,8 +109,8 @@ void Biblioteca::modify()
         ifstream intf1("Booksdata.txt", ios::binary);
         if (!intf1)
         {
-            cout << "\n\t\tFile Not Found\n";
-            cout << "\n\t\tPress any key to continue.....";
+            cout << endl << "Arquivo nao encontrado";
+            cout << endl << "Pressione qualquer tecla para continuar...";
             getch();
             system("cls");
             librarian();
