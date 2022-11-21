@@ -2,10 +2,10 @@
 
 Biblioteca::Biblioteca()
 {
-    strcpy(bookname, "NO Book Name");
-    strcpy(auname, "No Author Name");
-    strcpy(sc, "No Book ID");
-    strcpy(sc1, "No Book ID");
+    strcpy(bookname, "Nome do Livro");
+    strcpy(auname, "Nome do Autor");
+    strcpy(sc, "ID do Livro");
+    strcpy(sc1, "ID do Livro");
     q = 0;
     B = 0;
     p = 0;
@@ -15,23 +15,22 @@ void Biblioteca::getdata()
 {
     int i;
     fflush(stdin);
-    cout << "\n\t\tEnter the details :-\n";
-    cout << "\n\t\tEnter Book's Name : ";
+    cout << endl << "Digite o nome do livro: ";
     cin.getline(bookname, 100);
     for (i = 0; bookname[i] != '\0'; i++)
     {
         if (bookname[i] >= 'a' && bookname[i] <= 'z')
             bookname[i] -= 32;
     }
-    cout << "\n\t\tEnter Author's Name : ";
+    cout << endl << "Digite o nome do autor: ";
     cin.getline(auname, 50);
-    cout << "\n\t\tEnter Publication name : ";
+    cout << endl << "Digite o nome de publicacao: ";
     cin.getline(sc1, 50);
-    cout << "\n\t\tEnter Book's ID : ";
+    cout << endl << "Digite o ID do livro: ";
     cin.getline(sc, 20);
-    cout << "\n\t\tEnter Book's Price : ";
+    cout << endl << "Digite o preço do livro: ";
     cin >> p;
-    cout << "\n\t\tEnter Book's Quantity : ";
+    cout << endl << "Digite a quantidade de livros: ";
     cin >> q;
 }
 
