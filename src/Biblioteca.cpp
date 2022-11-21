@@ -1,6 +1,17 @@
-#include "Library.hpp"
+#include "Biblioteca.hpp"
 
-void Lib::getdata()
+Biblioteca::Biblioteca()
+{
+    strcpy(bookname, "NO Book Name");
+    strcpy(auname, "No Author Name");
+    strcpy(sc, "No Book ID");
+    strcpy(sc1, "No Book ID");
+    q = 0;
+    B = 0;
+    p = 0;
+}
+
+void Biblioteca::getdata()
 {
     int i;
     fflush(stdin);
@@ -24,7 +35,7 @@ void Lib::getdata()
     cin >> q;
 }
 
-void Lib::show(int i)
+void Biblioteca::show(int i)
 {
     cout << "\n\t\tBook Name : " << bookname << endl;
     cout << "\n\t\tBook's Author Name : " << auname << endl;
@@ -37,7 +48,7 @@ void Lib::show(int i)
     }
 }
 
-void Lib::booklist(int i)
+void Biblioteca::booklist(int i)
 {
     int b, r = 0;
     system("cls");
@@ -75,7 +86,7 @@ void Lib::booklist(int i)
     else
         librarian();
 }
-void Lib::modify()
+void Biblioteca::modify()
 {
     char st1[100];
     int i = 0, b, cont = 0;
@@ -300,7 +311,7 @@ void Lib::modify()
     librarian();
 }
 
-int Lib::branch(int x)
+int Biblioteca::branch(int x)
 {
     int i;
     cout << "\n\t\t>>Please Choose one Branch :-\n";
@@ -342,7 +353,7 @@ int Lib::branch(int x)
     return 0;
 }
 
-void Lib::see(int x)
+void Biblioteca::see(int x)
 {
     int i, b, cont = 0;
     char ch[100];
@@ -427,7 +438,7 @@ void Lib::see(int x)
         librarian();
 }
 
-void Lib::issue()
+void Biblioteca::issue()
 {
     char st[50], st1[20];
     int b, i, j, d, m, y, cont = 0;
@@ -610,7 +621,7 @@ void Lib::issue()
     librarian();
 }
 
-void Lib::fine(int d, int m, int y, int dd, int mm, int yy)
+void Biblioteca::fine(int d, int m, int y, int dd, int mm, int yy)
 {
     long int n1, n2;
     int years, l, i;
@@ -637,7 +648,7 @@ void Lib::fine(int d, int m, int y, int dd, int mm, int yy)
         cout << "\n\t\tThe Total Fine is : " << n2;
 }
 
-void Lib::der(char st[], int b, int x)
+void Biblioteca::der(char st[], int b, int x)
 {
     int i, cont = 0;
     fstream intf("Booksdata.txt", ios::in | ios::out | ios::ate | ios::binary);
@@ -675,7 +686,7 @@ void Lib::der(char st[], int b, int x)
     intf.close();
 }
 
-void Lib::get()
+void Biblioteca::get()
 {
     int i;
     cout << "\n\t*********** LIBRARY MANAGEMENT SYSTEM ***********\n"
@@ -703,7 +714,7 @@ void Lib::get()
     }
 }
 
-void Lib::student()
+void Biblioteca::student()
 {
     int i;
     cout << "\n\t************ WELCOME STUDENT ************\n";
@@ -731,7 +742,7 @@ void Lib::student()
     }
 }
 
-void Lib::pass()
+void Biblioteca::pass()
 {
     int i = 0;
     char ch, st[21], ch1[21] = {"pass"};
@@ -775,7 +786,7 @@ void Lib::pass()
     }
 }
 
-void Lib::librarian()
+void Biblioteca::librarian()
 {
     int i;
     cout << "\n\t************ WELCOME LIBRARIAN ************\n";
@@ -814,7 +825,7 @@ void Lib::librarian()
     }
 }
 
-void Lib::password()
+void Biblioteca::password()
 {
     int i = 0, j = 0;
     char ch, st[21], ch1[21] = {"pass"};
