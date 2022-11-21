@@ -663,7 +663,7 @@ void Biblioteca::fine(int d, int m, int y, int dd, int mm, int yy)
     n1 = n2 - n1;
     n2 = n1 - 15;
     if (n2 > 0)
-        cout << "\n\t\tThe Total Fine is : " << n2;
+        cout << endl << "Multa de " << n2 << " dias";
 }
 
 void Biblioteca::der(char st[], int b, int x)
@@ -695,8 +695,8 @@ void Biblioteca::der(char st[], int b, int x)
     }
     if (cont == 0)
     {
-        cout << "\n\t\tBook not found.\n";
-        cout << "\n\n\t\tPress any key to continue.....";
+        cout << endl << "Livro nao encontrado";
+        cout << endl << "Pressione qualquer tecla para continuar";
         getch();
         system("cls");
         issue();
@@ -707,11 +707,13 @@ void Biblioteca::der(char st[], int b, int x)
 void Biblioteca::get()
 {
     int i;
-    cout << "\n\t*********** LIBRARY MANAGEMENT SYSTEM ***********\n"
-         << "\n\t\t\t    L M S C++\n";
-    cout << "\n\t\t>>Please Choose Any Option To login \n";
-    cout << "\n\t\t1.Student\n\n\t\t2.Librarian\n\n\t\t3.Close Application\n";
-    cout << "\n\t\tEnter your choice : ";
+    cout << endl << "*********** Sistema de Gerenciamento de Biblioteca ***********";
+    cout << endl << "          UFMG - Universidade Federal de Minas Gerais"  << endl;
+    cout << endl << "Por favor, escolha uma das opcoes abaixo: ";
+    cout << endl << "1. Estudante";
+    cout << endl << "2. Bibliotecario";
+    cout << endl << "3. Sair";
+    cout << endl << "Opcao: ";
     cin >> i;
     if (i == 1)
     {
@@ -725,7 +727,7 @@ void Biblioteca::get()
         exit(0);
     else
     {
-        cout << "\n\t\tPlease enter correct option :(";
+        cout << endl << "Opcao invalida";
         getch();
         system("CLS");
         get();
@@ -735,10 +737,13 @@ void Biblioteca::get()
 void Biblioteca::student()
 {
     int i;
-    cout << "\n\t************ WELCOME STUDENT ************\n";
-    cout << "\n\t\t>>Please Choose One Option:\n";
-    cout << "\n\t\t1.View BookList\n\n\t\t2.Search for a Book\n\n\t\t3.Go to main menu\n\n\t\t4.Close Application\n";
-    cout << "\n\t\tEnter your choice : ";
+    cout << endl << "*********** Seja bem-vindo(a) Estudante ***********";
+    cout << endl << "Por favor, escolha uma das opcoes abaixo: ";
+    cout << endl << "1. Ver lista de livros";
+    cout << endl << "2. Pesquisar livro";
+    cout << endl << "3. Voltar ao menu anterior"
+    cout << endl << "4. Fechar aplicacao";
+    cout << endl << "Opcao: ";
     cin >> i;
     if (i == 1)
         booklist(1);
@@ -753,7 +758,7 @@ void Biblioteca::student()
         exit(0);
     else
     {
-        cout << "\n\t\tPlease enter correct option :(";
+        cout << endl << "Opcao invalida";
         getch();
         system("cls");
         student();
@@ -764,7 +769,7 @@ void Biblioteca::pass()
 {
     int i = 0;
     char ch, st[21], ch1[21] = {"pass"};
-    cout << "\n\t\tEnter Password : ";
+    cout << endl << "Insira a senha: ";
     while (1)
     {
         ch = getch();
@@ -797,7 +802,8 @@ void Biblioteca::pass()
     }
     else
     {
-        cout << "\n\n\t\tWrong Password.\n\n\t\ttry again.....\n";
+        cout << endl << "Senha incorreta"; 
+        cout << endl << "Tente novamente";
         getch();
         system("cls");
         get();
@@ -807,10 +813,16 @@ void Biblioteca::pass()
 void Biblioteca::librarian()
 {
     int i;
-    cout << "\n\t************ WELCOME LIBRARIAN ************\n";
-    cout << "\n\t\t>>Please Choose One Option:\n";
-    cout << "\n\t\t1.View BookList\n\n\t\t2.Search for a Book\n\n\t\t3.Modify/Add Book\n\n\t\t4.Issue Book\n\n\t\t5.Go to main menu\n\n\t\t6.Change Password\n\n\t\t7.Close Application\n";
-    cout << "\n\t\tEnter your choice : ";
+    cout << endl << "*********** Seja bem-vindo(a) Bibliotecario ***********";
+    cout << endl << "Por favor, escolha uma das opcoes abaixo: ";
+    cout << endl << "1. Ver lista de livros";
+    cout << endl << "2. Pesquisar livro";
+    cout << endl << "3. Adicionar/Modificar livro";
+    cout << endl << "4. Emprestar livro";
+    cout << endl << "5. Voltar ao menu anterior";
+    cout << endl << "6. Mudar senha";
+    cout << endl << "7. Fechar aplicacao";
+    cout << endl << "Opcao: ";
     cin >> i;
     switch (i)
     {
@@ -836,7 +848,7 @@ void Biblioteca::librarian()
     case 7:
         exit(0);
     default:
-        cout << "\n\t\tPlease enter correct option :(";
+        cout << endl << "Opcao invalida";
         getch();
         system("cls");
         librarian();
@@ -848,7 +860,8 @@ void Biblioteca::password()
     int i = 0, j = 0;
     char ch, st[21], ch1[21] = {"pass"};
     system("cls");
-    cout << "\n\n\t\tEnter Old Password : ";
+    cout << endl << "*********** Mudar senha ***********";
+    cout << endl << "Insira a senha atual: ";
     while (1)
     {
         ch = getch();
@@ -877,8 +890,9 @@ void Biblioteca::password()
     if (st[i] == '\0' && ch1[i] == '\0')
     {
         system("cls");
-        cout << "\n\t**The Password Should be less than 20 characters & don't use spaces**\n\n";
-        cout << "\n\t\tEnter New Password : ";
+        cout << endl << "*********** Mudar senha ***********";
+        cout << endl << "Insira a nova senha (menor que 20 caracteres e nao use espacos): ";
+        cout << endl << "Senha: ";
         fflush(stdin);
         i = 0;
         while (1)
@@ -891,7 +905,7 @@ void Biblioteca::password()
                     ;
                 if (j > 20 || st[i] == ' ')
                 {
-                    cout << "\n\n\t\tYou did't follow the instruction \n\n\t\tPress any key for try again.....";
+                    cout << endl << "Senha invalida, tenta novamente";
                     getch();
                     system("cls");
                     password();
@@ -915,16 +929,16 @@ void Biblioteca::password()
         ofstream outf("password.txt");
         outf << st;
         outf.close();
-        cout << "\n\n\t\tYour Password has been changed Successfully.";
-        cout << "\n\t\tPress any key to continue......";
+        cout << endl << "Senha alterada com sucesso";
+        cout << endl << "Pressione qualquer tecla para continuar";
         getch();
         system("cls");
         librarian();
     }
     else
     {
-        cout << "\n\n\t\tPassword is incorrect.....\n";
-        cout << "\n\t\tEnter 1 for retry or 2 for menu";
+        cout << endl << "Senha incorreta";
+        cout << endl << "Insira 1 para tentar novamente ou 2 para voltar ao menu anterior: ";
         cin >> i;
         if (i == 1)
         {
