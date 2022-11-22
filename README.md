@@ -39,7 +39,6 @@
 
 ## Começando 🚀
 
-> [![Documentação Doxygen][documentacao-shield]][documentacao-url]
 
 Para começar a utilizar o repositório, você precisa cumprir todos os requisitos abaixo:
 
