@@ -6,11 +6,19 @@
 #include <string>
 #include <fstream>
 #include <cstring>
-#include <conio.h>
-
+#include <termios.h>
 #pragma warning(pop)
 
 using namespace std;
+
+#ifndef _mygetch_
+#define _mygetch_
+static struct termios old, _new;
+void initTermioss(int echo);
+void resetTermioss();
+char getch__(int echo);
+char getch2();
+#endif
 
 class Biblioteca
 {
@@ -33,5 +41,8 @@ class Biblioteca
         void der(char[], int, int);
         void fine(int, int, int, int, int, int);
 };
+
+
+
 
 #endif
