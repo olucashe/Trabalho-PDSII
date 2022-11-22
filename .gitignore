@@ -37,3 +37,16 @@ build/
 
 #ignore .vscode folders
 .vscode/
+
+#ignore replit.nix
+replit.nix
+
+#ignore .replit
+.replit
+
+#ignore .ccls-cache folder
+.ccls-cache/
+
+#ignore main and main.gcno
+main
+main.gcno
