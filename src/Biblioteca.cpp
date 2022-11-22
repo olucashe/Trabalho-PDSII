@@ -754,14 +754,19 @@ void Biblioteca::student() {
  *
  */
 void Biblioteca::pass() {
-  int clear = 0;
+  int clear = 0, first = 1;
   int i = 0;
   char ch, st[21], ch1[21] = {"pass"};
   cout << endl << "Insira a senha: ";
   while (1) {
     ch = getch2();
-    cout << ch << endl;
-    if (ch == 13) {
+    if(first == 1)
+    {
+      first = 0;
+      if(ch == 10)
+        ch = getch2();
+    }
+    if (ch == 10) {
       st[i] = '\0';
       break;
     } else if (ch == 8 && i > 0) {
@@ -851,7 +856,7 @@ void Biblioteca::password() {
   cout << endl << "Insira a senha atual: ";
   while (1) {
     ch = getch2();
-    if (ch == 13) {
+    if (ch == 10) {
       st[i] = '\0';
       break;
     } else if (ch == 8 && i > 0) {
@@ -879,7 +884,7 @@ void Biblioteca::password() {
     while (1) {
       j++;
       ch = getch2();
-      if (ch == 13) {
+      if (ch == 10) {
         for (i = 0; st[i] != ' ' && st[i] != '\0'; i++)
           ;
         if (j > 20 || st[i] == ' ') {

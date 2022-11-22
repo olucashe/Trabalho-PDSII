@@ -754,14 +754,20 @@ void Biblioteca::student() {
  *
  */
 void Biblioteca::pass() {
-  int clear = 0;
+  int clear = 0, first = 1;
   int i = 0;
   char ch, st[21], ch1[21] = {"pass"};
   cout << endl << "Insira a senha: ";
   while (1) {
     ch = getch2();
-    cout << ch ;
-    if (ch == 13) {
+    if(first == 1)
+    {
+      first = 0;
+      if(ch == 10)
+        ch = getch2();
+    }
+    
+    if (ch == 10) {
       st[i] = '\0';
       break;
     } else if (ch == 8 && i > 0) {
@@ -851,7 +857,7 @@ void Biblioteca::password() {
   cout << endl << "Insira a senha atual: ";
   while (1) {
     ch = getch2();
-    if (ch == 13) {
+    if (ch == 10) {
       st[i] = '\0';
       break;
     } else if (ch == 8 && i > 0) {
@@ -879,7 +885,7 @@ void Biblioteca::password() {
     while (1) {
       j++;
       ch = getch2();
-      if (ch == 13) {
+      if (ch == 10) {
         for (i = 0; st[i] != ' ' && st[i] != '\0'; i++)
           ;
         if (j > 20 || st[i] == ' ') {
@@ -924,26 +930,21 @@ void Biblioteca::password() {
   }
 }
 
-
-void initTermioss(int echo){
-    tcgetattr(0, &old); //grab old terminal i/o settings
-    _new = old; //make new settings same as old settings
-    _new.c_lflag &= ~ICANON; //disable buffered i/o
-    _new.c_lflag &= echo ? ECHO : ~ECHO; //set echo mode
-    tcsetattr(0, TCSANOW, &_new); //apply terminal io settings
+void initTermioss(int echo) {
+  tcgetattr(0, &old);                  // grab old terminal i/o settings
+  _new = old;                          // make new settings same as old settings
+  _new.c_lflag &= ~ICANON;             // disable buffered i/o
+  _new.c_lflag &= echo ? ECHO : ~ECHO; // set echo mode
+  tcsetattr(0, TCSANOW, &_new);        // apply terminal io settings
 }
-void resetTermioss(){
-    tcsetattr(0, TCSANOW, &old);
-}
+void resetTermioss() { tcsetattr(0, TCSANOW, &old); }
 
-char getch__(int echo){
-    char ch;
-    initTermioss(echo);
-    ch = getchar();
-    resetTermioss();
-    return ch;
+char getch__(int echo) {
+  char ch;
+  initTermioss(echo);
+  ch = getchar();
+  resetTermioss();
+  return ch;
 }
 
-char getch2(){
-    return getch__(0);
-}
+char getch2() { return getch__(0); }
