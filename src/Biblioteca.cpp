@@ -754,6 +754,7 @@ void Biblioteca::student() {
  *
  */
 void Biblioteca::pass() {
+  FilePassword f;
   int clear = 0, first = 1;
   int i = 0;
   char ch, st[21], ch1[21] = {"pass"};
@@ -778,7 +779,7 @@ void Biblioteca::pass() {
       i++;
     }
   }
-  ifstream inf("password.txt");
+  ifstream inf = f.read();
   inf >> ch1;
   inf.close();
   for (i = 0; st[i] == ch1[i] && st[i] != '\0' && ch1[i] != '\0'; i++)
@@ -928,22 +929,3 @@ void Biblioteca::password() {
     }
   }
 }
-
-void initTermioss(int echo) {
-  tcgetattr(0, &old);                  // grab old terminal i/o settings
-  _new = old;                          // make new settings same as old settings
-  _new.c_lflag &= ~ICANON;             // disable buffered i/o
-  _new.c_lflag &= echo ? ECHO : ~ECHO; // set echo mode
-  tcsetattr(0, TCSANOW, &_new);        // apply terminal io settings
-}
-void resetTermioss() { tcsetattr(0, TCSANOW, &old); }
-
-char getch__(int echo) {
-  char ch;
-  initTermioss(echo);
-  ch = getchar();
-  resetTermioss();
-  return ch;
-}
-
-char getch2() { return getch__(0); }

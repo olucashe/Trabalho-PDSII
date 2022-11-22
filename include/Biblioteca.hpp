@@ -6,19 +6,11 @@
 #include <string>
 #include <fstream>
 #include <cstring>
-#include <termios.h>
+#include "Utils.hpp"
+#include "FilePassword.hpp"
 #pragma warning(pop)
 
 using namespace std;
-
-#ifndef _mygetch_
-#define _mygetch_
-static struct termios old, _new;
-void initTermioss(int echo);
-void resetTermioss();
-char getch__(int echo);
-char getch2();
-#endif
 
 class Biblioteca
 {
