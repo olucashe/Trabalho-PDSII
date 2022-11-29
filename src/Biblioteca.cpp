@@ -21,6 +21,7 @@ Biblioteca::Biblioteca() {
 void Biblioteca::getdata() {
   int i;
   fflush(stdin);
+  getch2();
   cout << endl << "Digite o nome do livro: ";
   cin.getline(bookname, 100);
   for (i = 0; bookname[i] != '\0'; i++) {
@@ -856,7 +857,14 @@ void Biblioteca::password() {
   cout << endl << "*********** Mudar senha ***********";
   cout << endl << "Insira a senha atual: ";
   while (1) {
+    int first = 1;
     ch = getch2();
+    if(first == 1)
+    {
+      first = 0;
+      if(ch == 10)
+        ch = getch2();
+    }
     if (ch == 10) {
       st[i] = '\0';
       break;
@@ -906,6 +914,9 @@ void Biblioteca::password() {
         i++;
       }
     }
+    // se o ultimo caracter for um espaço, remove
+    if (st[i - 1] == ' ')
+      st[i - 1] = '\0';
     ofstream outf("password.txt");
     outf << st;
     outf.close();
