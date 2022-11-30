@@ -393,6 +393,7 @@ void Biblioteca::see(int x) {
   intf.read((char *)this, sizeof(*this));
   if (i == 1) {
     cout << endl << "Digite o nome do livro: ";
+    getch2();
     cin.getline(ch, 100);
     clear = system("clear");
     while (!intf.eof()) {
