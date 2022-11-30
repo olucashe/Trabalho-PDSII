@@ -3,7 +3,10 @@ O Sistema de Biblioteca é uma abstração de um sistema de Gerência de Bibliot
 durante o semestre, dentre eles Abstração, Encapsulamento, Herança e Polimorfismo,
 Modularidade e componentes reusáveis, Tratamento de exceções, entre outros conceitos abordados na disciplina.
   
-As histórias de usuário (User Stories) abaixo descrevem o que um usuário faz ou necessita fazer como parte de sua função no projeto, tendo como base um administrador da biblioteca e um usuário comum como pessoas que usarão o código. 
+  
+ ## Detalhamento do projeto
+  Para começar, iremos enumerar as histórias de usuário(User Stories) e explicá-las. As histórias de usuário abaixo descrevem o que um usuário faz ou necessita fazer como parte de sua função no projeto, tendo como base um administrador da biblioteca e um usuário comum como pessoas que usarão o código. Essas histórias de usuário guiaram o desenvolvimento do trabalho e o objetivo era fazer o que foi proposto nelas.  
+  
 
 
 ## ☕ User Stories
@@ -47,3 +50,32 @@ Como administrador, desejo ter a opção de emprestar um livro mais de uma vez p
 ### 10. Mudar dados do administrador
 
 Como administrador, desejo ter a opção de fazer outra senha para substituir a antiga que por definição é pass, sendo assim será possível alterar a senha para executar as ações do administrador.
+  
+  
+  
+  ## Detalhamento do Projeto:
+  Como citado acima, o projeto foi desenvolvido em C++ e tem como base o uso da Programação orientada a objetos. A seguir enumeraremos as classes usadas no projeto e a função de cada uma no código.
+  
+  1. Biblioteca
+  Essa Classe apresenta um arquivo cpp com os métodos devidamente aplicados e um arquivo hpp. Nessa classe, temos:
+  * Variáveis char: bookname (nome do livro), auname(nome do autor) , sc, sc1
+  * Variáveis int: q, B, P
+  
+  Além disso, nessa classe, temos as funções:
+  * get: Função principal do programa
+  * student: Função que mostra o painel do estudante
+  * pass: Função que verifica a senha do bibliotecário
+  * librarian: Função que mostra o painel do bibliotecário
+  * password: Função de gerenciamento de senha
+  * getdata: Função que adiciona um livro na biblioteca
+  * show: Função que mostra os dados de um livro
+  * booklist: Função que mostra os dados dos livros
+  * modify: Função que modifica os dados de um livro
+  * see: Função que mostra todos os livros de um determinado tipo
+  * branch: Função que mostra todos os tipos de livros
+  * issue: Função que gerencia o emprestimo de livros
+  * der: Função que verifica se o livro está disponível
+  * fine: Função que calcula a multa
+  
+  2. FilePassword
+  Essa classe herda de File
