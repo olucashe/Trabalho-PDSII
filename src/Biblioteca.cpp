@@ -55,6 +55,7 @@ void Biblioteca::show(int i) {
     cout << endl << "Preco do Livro: " << p;
     cout << endl << "Quantidade de Livros: " << q;
   }
+  getch2();
 }
 
 /**
@@ -135,6 +136,7 @@ void Biblioteca::modify() {
     if (i == 1) {
       clear = system("clear");
       cout << endl << "Digite o nome do livro: ";
+      getch2();
       cin.getline(st1, 100);
       clear = system("clear");
       fstream intf("Booksdata.txt",
@@ -159,6 +161,7 @@ void Biblioteca::modify() {
       intf.close();
     } else if (i == 2) {
       cout << endl << "Digite o ID do livro: ";
+      getch2();
       cin.getline(st1, 100);
       clear = system("clear");
       fstream intf("Booksdata.txt",
@@ -195,6 +198,7 @@ void Biblioteca::modify() {
       modify();
     } else
       cout << endl << "Livro modificado com sucesso";
+    getch2();
   } else if (i == 2) {
     clear = system("clear");
     B = branch(2);
@@ -227,6 +231,7 @@ void Biblioteca::modify() {
     if (i == 1) {
       clear = system("clear");
       cout << endl << "Digite o nome do livro: ";
+      getch2();
       cin.getline(st1, 100);
       ofstream outf("temp.txt", ios::app | ios::binary);
       ifstream intf("Booksdata.txt", ios::binary);
@@ -496,6 +501,7 @@ void Biblioteca::issue() {
       cout << endl
            << "Data de emprestimo: " << q << "/" << B << "/" << p << endl;
       intf.read((char *)this, sizeof(*this));
+      getch2();
     }
     intf.close();
   } else if (i == 3) {
@@ -762,10 +768,9 @@ void Biblioteca::pass() {
   cout << endl << "Insira a senha: ";
   while (1) {
     ch = getch2();
-    if(first == 1)
-    {
+    if (first == 1) {
       first = 0;
-      if(ch == 10)
+      if (ch == 10)
         ch = getch2();
     }
     if (ch == 10) {
@@ -859,10 +864,9 @@ void Biblioteca::password() {
   while (1) {
     int first = 1;
     ch = getch2();
-    if(first == 1)
-    {
+    if (first == 1) {
       first = 0;
-      if(ch == 10)
+      if (ch == 10)
         ch = getch2();
     }
     if (ch == 10) {
