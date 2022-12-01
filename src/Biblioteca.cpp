@@ -256,6 +256,7 @@ void Biblioteca::modify() {
       rename("temp.txt", "Booksdata.txt");
     } else if (i == 2) {
       cout << endl << "Digite o ID do livro: ";
+      getch2();
       cin.getline(st1, 100);
       ofstream outf("temp.txt", ios::app | ios::binary);
       ifstream intf("Booksdata.txt", ios::binary);
@@ -411,6 +412,7 @@ void Biblioteca::see(int x) {
     }
   } else if (i == 2) {
     cout << endl << "Digite o ID do livro: ";
+    getch2();
     cin.getline(ch, 100);
     clear = system("clear");
     while (!intf.eof()) {
@@ -471,6 +473,7 @@ void Biblioteca::issue() {
     clear = system("clear");
     fflush(stdin);
     cout << endl << "Digite o nome do livro: ";
+    getch2();
     cin.getline(bookname, 100);
     cout << endl << "Digite o ID do livro: ";
     cin.getline(sc, 20);
@@ -509,6 +512,7 @@ void Biblioteca::issue() {
     clear = system("clear");
     fflush(stdin);
     cout << endl << "Digite o nome do estudante: ";
+    getch2();
     cin.getline(st, 50);
     cout << endl << "Digite o ID do estudante: ";
     cin.getline(st1, 20);
@@ -523,7 +527,9 @@ void Biblioteca::issue() {
         cont++;
         if (cont == 1) {
           cout << endl << "Livros emprestados por " << st << ": " << endl;
+          // getch2();
           cout << endl << "Nome do estudante: " << auname;
+          // getch2();
           cout << endl << "ID do estudante: " << sc1;
         }
         cout << endl
