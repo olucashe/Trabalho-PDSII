@@ -4,7 +4,7 @@ durante o semestre, dentre eles Abstração, Encapsulamento, Herança e Polimorf
 Modularidade e componentes reusáveis, Tratamento de exceções, entre outros conceitos abordados na disciplina.
   
   
- ## Detalhamento do projeto
+ ## Introdução ao projeto:
   Para começar, iremos enumerar as histórias de usuário(User Stories) e explicá-las. As histórias de usuário abaixo descrevem o que um usuário faz ou necessita fazer como parte de sua função no projeto, tendo como base um administrador da biblioteca e um usuário comum como pessoas que usarão o código. Essas histórias de usuário guiaram o desenvolvimento do trabalho e o objetivo era fazer o que foi proposto nelas.  
   
 
@@ -56,10 +56,10 @@ Como administrador, desejo ter a opção de fazer outra senha para substituir a 
   ## Detalhamento do Projeto:
   Como citado acima, o projeto foi desenvolvido em C++ e tem como base o uso da Programação orientada a objetos. A seguir enumeraremos as classes usadas no projeto e a função de cada uma no código.
   
-  1. Biblioteca
-  Essa Classe apresenta um arquivo cpp com os métodos devidamente aplicados e um arquivo hpp. Nessa classe, temos:
-  * Variáveis char: bookname (nome do livro), auname(nome do autor) , sc, sc1
-  * Variáveis int: q, B, P
+1. Biblioteca
+Essa Classe apresenta um arquivo cpp com os métodos devidamente aplicados e um arquivo hpp. Nessa classe, temos:
+* Variáveis char: bookname (nome do livro), auname(nome do autor) , sc, sc1
+* Variáveis int: q, B, P
   
   Além disso, nessa classe, temos as funções:
   * get: Função principal do programa
@@ -77,5 +77,9 @@ Como administrador, desejo ter a opção de fazer outra senha para substituir a 
   * der: Função que verifica se o livro está disponível
   * fine: Função que calcula a multa
   
-  2. FilePassword
-  Essa classe herda de File
+2. File
+Essa classe é uma classe mãe e faz a leitura de algo.
+  
+3. FilePassword
+Essa classe herda o método da classe File. Com ela, conseguimos fazer a leitura da senha do Bibliotecário de um arquivo txt, e essa senha por padrão é "pass".
+  
